@@ -7,4 +7,7 @@
 // Examples and Edge cases
 
 public class LongestSubstringWithoutRepeatingCharacters {
+    public static void main(String args[]){
+        System.out.println("Test");
+    }
 }
