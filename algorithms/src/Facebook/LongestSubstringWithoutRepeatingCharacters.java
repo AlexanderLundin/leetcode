@@ -15,14 +15,19 @@ public class LongestSubstringWithoutRepeatingCharacters {
         System.out.println(find("abcabcbb"));
         System.out.println(find("bbbbb"));
         System.out.println(find("pwwkew"));
+        System.out.println(find(" "));
+        System.out.println(find("c"));
     }
 
-    public static int find(String str){
+    public static int find(String s){
         int longestString = 0;
-        for (int i = 0; i < str.length(); i++){
+        if (s.equals(" "))
+            return 1;
+        for (int i = 0; i < s.length(); i++){
             List<Integer> asciiValues = new ArrayList<Integer>();
-            for (int j = i; j < str.length(); j++){
-                char character = str.charAt(j);
+            for (int j = i; j < s.length(); j++){
+                char character = s.charAt(j);
+                String substr = s.substring(i, j + 1);
                 Integer asciiValue = Integer.valueOf(character);
                 boolean duplicate = asciiValues.contains(asciiValue);
                 if (duplicate){
@@ -30,8 +35,12 @@ public class LongestSubstringWithoutRepeatingCharacters {
                     if (subStringLen > longestString){
                         longestString = subStringLen;
                     }
-                    j = str.length();
+                    j = s.length();
                 }else {
+                    int subStringLen = substr.length();
+                    if (subStringLen > longestString){
+                        longestString = subStringLen;
+                    }
                     asciiValues.add(asciiValue);
                 }
             }
