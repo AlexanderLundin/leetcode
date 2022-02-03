@@ -33,7 +33,7 @@ public class ThreeSum {
 
     public List<List<Integer>> TwoSum(int[] nums, int i, List<List<Integer>> result) {
         int low = i + 1;
-        int hi = nums.length;
+        int hi = nums.length - 1;
         while (low < hi){
             int sum = nums[i] + nums[low] + nums[hi];
             if (sum < 0){
