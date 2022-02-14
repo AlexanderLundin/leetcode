@@ -21,20 +21,6 @@ public class RomanToInteger {
         values.put("V", 5);
         values.put("I", 1);
     }
-    public static void main(String args[]){
-        assertionDriver("III", 3);
-        assertionDriver("LVIII", 58);
-        assertionDriver("MCMXCIV", 1994);
-
-    }
-
-    public static void assertionDriver(String s, int expected){
-        RomanToInteger o = new RomanToInteger();
-        int actual = o.romanToInt(s);
-        assert expected == actual : "Test Failed, expected: "
-                + String.valueOf(expected) + ", actual was: " + String.valueOf(actual);
-        System.out.println(actual);
-    }
 
     public int romanToInt(String s) {
         int sum = 0;

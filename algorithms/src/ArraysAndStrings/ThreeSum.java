@@ -5,22 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ThreeSum {
-
-    public static void main(String args[]){
-
-
-        assertionDriver(new int[]{-1,0,1,2,-1,-4}, Arrays.asList(Arrays.asList(-1,-1,2), Arrays.asList(-1,0,1)));
-
-    }
-
-    public static void assertionDriver(int[] nums, List<List<Integer>> expected){
-        ThreeSum o = new ThreeSum();
-        List<List<Integer>> actual = o.threeSum(nums);
-        assert expected == actual : "Test Failed, expected: "
-                + String.valueOf(expected) + ", actual was: " + String.valueOf(actual);
-        System.out.println(actual);
-    }
-
+    
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> result = new ArrayList<>();

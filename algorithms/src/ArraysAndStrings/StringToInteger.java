@@ -11,19 +11,6 @@ package ArraysAndStrings;
 
 public class StringToInteger {
 
-    public static void main(String args[]){
-        assertionDriver("42", 42);
-        assertionDriver("   -42", -42);
-    }
-
-    public static void assertionDriver(String s, int expected){
-        StringToInteger o = new StringToInteger();
-        int actual = o.myAtoi(s);
-        assert expected == actual : "Test Failed, expected: "
-                + String.valueOf(expected) + ", actual was: " + String.valueOf(actual);
-        System.out.println(actual);
-    }
-
     public int myAtoi(String s) {
         int result = 0;
         int sign = 1;

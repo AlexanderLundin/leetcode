@@ -11,15 +11,7 @@ import java.util.List;
 //      Are there any indicators of time vs space trade-offs?
 // Examples and Edge cases
 public class LongestSubstringWithoutRepeatingCharacters {
-    public static void main(String args[]){
-        System.out.println(find("abcabcbb"));
-        System.out.println(find("bbbbb"));
-        System.out.println(find("pwwkew"));
-        System.out.println(find(" "));
-        System.out.println(find("c"));
-    }
-
-    public static int find(String s){
+    public int find(String s){
         int longestString = 0;
         if (s.equals(" "))
             return 1;
